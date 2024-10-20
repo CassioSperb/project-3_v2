@@ -1,0 +1,102 @@
+/* Center header and margin adjustments */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Adjusting page title */
+h2, h3 {
+    margin-top: 10px;
+    background-color: #0f3c8f;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+/* Flexbox container for dropdowns and chart side by side */
+.dropdown-chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+
+/* Dropdown container, stacked vertically */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 15%;
+    height: fit-content;
+    
+}
+
+/* Style the chart container, keeping it on the right side */
+.chart-container {
+    width: 80%;
+    height: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* Table container centralized and taking 100% width */
+.table-container {
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 10%;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Style for table header and data cells */
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;  /* Center text in all cells */
+}
+
+/* Centralize and adjust columns from table */
+td:nth-child(2), td:nth-child(3) {
+    text-align: center;  /* Center text for ROI columns */
+}
+
+/* Add padding to dropdowns */
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Table grid styling */
+table, th, td {
+    border: 1px solid #000;  /* Add grid to the table */
+}
+
+/* Style for dropdowns and spacing */
+label, select {
+    margin-bottom: 15px;
+}
+
+/* Adjust the height of multi-select box to fit companies without scroll */
+select#company-select {
+    height: auto;
+    width: 100%;  /* Adjust width to fit container */
+}
+/* Adjusting footer style */
+footer {
+    margin-top: 50px;
+    background-color: #0f3c8f;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    height:min-content;
+}
+/* Adjusting text inside footer */
+.footer-box {
+    display: flex;
+    justify-content: space-around;            
+}
