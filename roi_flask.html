@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="../../static/css/roi_styles.css">
+</head>
+<body>
+    <!-- Header section for centralizing the h2 -->
+    <div class="header">
+        <h2>Return of Investments (All Companies)</h2>
+    </div>
+
+    <!-- Dropdowns and Chart section -->
+    <div class="dropdown-chart-container">
+        <!-- Dropdown section -->
+        <div class="dropdown-container">
+            <!-- Dropdown for metric selection -->
+            <label for="metric">Choose a metric:</label>
+            <select id="metric" onchange="updateChart()">
+                <option value="Cumulative ROI on $1500 ($)">Cumulative ROI on $1500 ($)</option>
+                <option value="Cumulative ROI (%)">Cumulative ROI (%)</option>
+            </select>
+
+            <br><br>
+
+            <!-- Dropdown for multi-select company filter -->
+            <label for="company-select">Choose companies:</label>
+            <select id="company-select" multiple size="5" onchange="updateChart()">
+                <!-- Companies will be dynamically populated -->
+            </select>
+        </div>
+
+        <!-- Chart container -->
+        <div class="chart-container">
+            <canvas id="roiChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+
+    <!-- Table container, below dropdowns and chart, centralized -->
+    <div class="table-container">
+        <h3>Return of Investment 2021Q4</h3>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Cumulative ROI on $1500 ($)</th>
+                    <th>Cumulative ROI (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated -->
+            </tbody>
+        </table>
+    </div>
+    
+    <footer>
+        <div class="footer-box">
+            <div>
+                <h4>Team Members</h4>
+                Cassio Sperb, Juan Avila, Kendall Burkett, Patricia Taylor, Rahmeen Zindani
+            </div>
+            <div>
+                <h4>Project</h4>
+                Data Visualization Track<br>
+            </div>
+            <div>
+                <h4>University of Texas</h4>
+                Bootcamp in Data Analytics<br>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="../../static/js/roi_flask.js"></script>
+</body>
+</html>
